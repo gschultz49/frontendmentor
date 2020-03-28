@@ -1,0 +1,4 @@
+.links {
+  color: var(--main-text-color);
+  @apply font-bold bg-blue-500 p-12;
+}

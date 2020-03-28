@@ -1,0 +1,56 @@
+/* turn off vscode semicolon warnings
+https://www.meidev.co/blog/visual-studio-code-css-linting-with-tailwind/
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-text-color: var(--Dark-Blue);
+  --Dark-Blue: hsl(233, 26%, 24%);
+  --Lime-Green: hsl(136, 65%, 51%);
+  --Bright-Cyan: hsl(192, 70%, 51%);
+  --Grayish-Blue: hsl(233, 8%, 62%);
+  --Light-Grayish-Blue: hsl(220, 16%, 96%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+
+  --main-side-margins: 11%;
+  --main-font-size: 18px;
+  --main-font-weight: 300;
+
+  --sub-navigation-font-size: 16px;
+}
+
+body {
+  font-size: var(--main-font-size);
+  font-family: "Public Sans", sans-serif;
+  font-weight: var(--main-font-weight);
+}
+
+#sub-navigation > a {
+  color: var(--Grayish-Blue);
+  font-weight: var(--main-font-weight);
+  font-size: var(--sub-navigation-font-size);
+}
+
+button {
+  font-size: calc(var(--main-font-size) - 2px);
+}
+.gradient-shift {
+  background-image: linear-gradient(
+    to right,
+    hsl(136, 65%, 51%),
+    hsl(192, 70%, 51%)
+  );
+}
+
+.body-container {
+  padding-left: var(--main-side-margins);
+  padding-right: var(--main-side-margins);
+}
+#splash-container {
+  /* background-color: var(--Very-Light-Gray); */
+  background-color: red;
+}
