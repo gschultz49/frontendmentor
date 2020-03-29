@@ -1,7 +1,7 @@
 import Navigation from "../components/navigation";
 import Splash from "../components/splash";
 import WhyChose from "../components/whyChoose";
-import { Articles } from "../components/articles";
+import Articles from "../components/articles";
 
 const App = () => {
   return (
@@ -10,7 +10,8 @@ const App = () => {
       <Navigation id={"navigation-container"} />
       <Splash id={"splash-container"} />
       <WhyChose id={"whyChoose-container"} />
-      {/*<Articles /> */}
+      <Articles id={"articles-container"} />
+      {/* end nav */}
     </>
   );
 };

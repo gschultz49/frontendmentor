@@ -55,27 +55,25 @@ button {
   background-color: red;
 }
 
-
-#splash-left > h3{
+#splash-left > h3 {
   font-size: calc(var(--main-font-size) * 3.5);
-  line-height: calc(var(--main-font-size) * 4.0);
+  line-height: calc(var(--main-font-size) * 4);
 }
 
-#splash-left > p{
+#splash-left > p {
   font-size: calc(var(--main-font-size) * 1.25);
   @apply py-8;
 }
 
-
-#whyChoose-container{
+#whyChoose-container {
   background-color: lightgreen;
 }
 
 #whyChoose-top {
-  @apply py-20;
+  @apply py-16;
 }
-#whyChoose-top h3{
-  font-size: calc(var(--main-font-size) * 2.0);
+#whyChoose-top h3 {
+  font-size: calc(var(--main-font-size) * 2);
   @apply py-4;
 }
 
@@ -83,8 +81,35 @@ button {
   @apply mr-10;
 }
 
-.whyChooseCard h1{
+.whyChooseCard h1 {
+  /* copy */
   font-size: calc(var(--main-font-size) * 1.25);
   font-weight: calc(var(--main-font-weight) + 100);
   @apply py-8;
+}
+
+
+#articles-top {
+  /* copy  */
+  @apply py-16;
+}
+
+#articles-top h3 {
+  font-size: calc(var(--main-font-size) * 2);
+  @apply py-8;
+}
+
+.articleCard h1 {
+  /* copy */
+  font-size: calc(var(--main-font-size) * 1.25);
+  font-weight: calc(var(--main-font-weight) + 100);
+  @apply py-8;
+}
+
+.articleCard img {
+  @apply rounded h-48 w-full;
+}
+.articleCard {
+  background-color: purple;
+  @apply px-2;
 }
