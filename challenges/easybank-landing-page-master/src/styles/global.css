@@ -54,3 +54,14 @@ button {
   /* background-color: var(--Very-Light-Gray); */
   background-color: red;
 }
+
+
+#splash-content > h3{
+  font-size: calc(var(--main-font-size) * 3.5);
+  line-height: calc(var(--main-font-size) * 4.0);
+}
+
+#splash-content > p{
+  font-size: calc(var(--main-font-size) * 1.25);
+  @apply py-8;
+}
