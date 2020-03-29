@@ -3,11 +3,11 @@ const WhyChooseCard = props => {
   const imgLocation = `/images/${img}`;
 
   return (
-    <section className="whyChooseCard w-1/4">
+    <div className="whyChooseCard flex-1">
       <img src={imgLocation} alt={title}></img>
       <h1>{title}</h1>
       <p>{description}</p>
-    </section>
+    </div>
   );
 };
 

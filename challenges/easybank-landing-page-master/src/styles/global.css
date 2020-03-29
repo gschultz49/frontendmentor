@@ -75,5 +75,16 @@ button {
   @apply py-20;
 }
 #whyChoose-top h3{
-  font-size: calc(var(--main-font-size) * 2.0)
+  font-size: calc(var(--main-font-size) * 2.0);
+  @apply py-4;
+}
+
+.whyChooseCard {
+  @apply mr-10;
+}
+
+.whyChooseCard h1{
+  font-size: calc(var(--main-font-size) * 1.25);
+  font-weight: calc(var(--main-font-weight) + 100);
+  @apply py-8;
 }

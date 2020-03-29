@@ -3,7 +3,7 @@ import WhyChooseCard from "./whyChooseCard";
 
 const WhyChoose = () => {
   return (
-    <section id="whyChoose" className="flex">
+    <section id="whyChoose">
       <>
         <WhyChooseTop />
         <WhyChooseGrid />
@@ -14,8 +14,8 @@ const WhyChoose = () => {
 
 const WhyChooseTop = () => {
   return (
-    <section id="whyChoose-top" className="flex mb-4">
-      <div className="w-full">
+    <section id="whyChoose-top" className="flex flex-row">
+      <div>
         <h3>Why Choose Easybank?</h3>
         <p>
           We leverage Open Banking to turn your bank account into your financial
@@ -48,7 +48,7 @@ const WhyChooseGrid = () => {
     },
     {
       img: "icon-onboarding.svg",
-      title: "Online Banking",
+      title: "Fast Onboarding",
       description:
         "We don't do branches. Open your account in minutes online and start taking control of your finances in the right way."
     },
@@ -60,10 +60,10 @@ const WhyChooseGrid = () => {
     }
   ];
   return (
-    <section id="whyChoose-grid" className="flex">
-      {whyChooseCards.map(card => {
-        return <WhyChooseCard card={card} />;
-      })}
+    <section id="whyChoose-grid" className="flex flex-row">
+        {whyChooseCards.map(card => {
+          return <WhyChooseCard card={card} />;
+        })}
     </section>
   );
 };
