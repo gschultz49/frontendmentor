@@ -1,9 +1,4 @@
 import BodyContainer from "./body-container";
-import ArticlesCard from "./articlesCard";
-import { articleCard } from "../api/get-articles";
-import fetch from "isomorphic-unfetch";
-import { NextPage } from "next";
-import { GetServerSideProps } from "next";
 import ArticlesGrid from "./articleGrid";
 
 const Articles = props => {

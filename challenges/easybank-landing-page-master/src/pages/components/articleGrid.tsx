@@ -1,13 +1,12 @@
 import ArticlesCard from "./articlesCard";
 import { useState, useEffect } from "react";
+import fetch from "isomorphic-fetch";
 
 const ArticlesGrid = () => {
   const [articleCards, setCards] = useState([]);
   useEffect(() => {
-    const baseUrl = "http://localhost:3000";
     const endpoint = "/api/get-articles";
-    const formattedEndpoint = `${baseUrl}${endpoint}`;
-    fetch(formattedEndpoint)
+    fetch(endpoint)
       .then(res => res.json())
       .then(setCards);
   }, []); // only run once
