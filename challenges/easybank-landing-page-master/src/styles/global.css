@@ -54,14 +54,10 @@ button {
   padding-left: var(--main-side-margins);
   padding-right: var(--main-side-margins);
 }
-#splash-container {
-  background-color: var(--Very-Light-Gray);
-  padding-right: var(--main-side-margins);
-  /* background-color: red; */
-}
 
 #splash {
   padding-left: var(--main-side-margins);
+  background-color: var(--Very-Light-Gray);
 }
 
 #splash-left {
