@@ -13,9 +13,9 @@ const ArticlesGrid = () => {
   }, []); // only run once
   return (
     <section id="articles-grid" className="flex flex-row">
-      {articleCards.map(article => {
+      {articleCards.map((article, idx) => {
         console.log(article);
-        return <ArticlesCard key={article.img} card={article} />;
+        return <ArticlesCard key={idx} card={article} />;
       })}
     </section>
   );

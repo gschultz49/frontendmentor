@@ -61,8 +61,8 @@ const WhyChooseGrid = () => {
   ];
   return (
     <section id="whyChoose-grid" className="flex flex-row">
-        {whyChooseCards.map(card => {
-          return <WhyChooseCard key={card.img} card={card} />;
+        {whyChooseCards.map((card, idx) => {
+          return <WhyChooseCard key={idx} card={card} />;
         })}
     </section>
   );
