@@ -35,6 +35,10 @@ body {
   font-size: var(--sub-navigation-font-size);
 }
 
+#navigation-container{
+  position: relative;
+}
+
 button {
   font-size: calc(var(--main-font-size) - 2px);
 }
@@ -52,7 +56,16 @@ button {
 }
 #splash-container {
   background-color: var(--Very-Light-Gray);
+  padding-right: var(--main-side-margins);
   /* background-color: red; */
+}
+
+#splash{
+  padding-left: var(--main-side-margins);
+}
+
+#splash-left{
+  @apply py-32 align-middle;
 }
 
 #splash-left > h3 {
@@ -65,17 +78,50 @@ button {
   @apply py-8;
 }
 
+#splash-right {
+  width: 100%;
+  position: relative;
+  background: url(/images/bg-intro-desktop.svg);
+  background-position: -20px -150px;
+  background-size: 48em;
+  background-repeat: no-repeat;
+  padding-bottom: 30em;
+  overflow:hidden;
+}
+
+#splash-right #img-foreground {
+  position: absolute;
+  top: -80px;
+  -webkit-transform: translateX(100px);
+  transform: translateX(175px) scale(1.15);
+  width: 90%;
+  
+}
+#splash-right #img-foreground-container {
+  position: relative;
+}
+
 #whyChoose-container {
   background-color: var(--Light-Grayish-Blue);
   /* background-color: lightgreen; */
 }
 
-#whyChoose-top {
+#whyChoose {
   @apply py-16;
 }
+
+#whyChoose-top {
+  /* @apply py-16; */
+  @apply pb-16;
+}
+
 #whyChoose-top h3 {
   font-size: calc(var(--main-font-size) * 2.25);
   @apply py-4;
+}
+
+#whyChoose-top .caption {
+  color: var(--Grayish-Blue);
 }
 
 .whyChooseCard {
@@ -87,6 +133,10 @@ button {
   font-size: calc(var(--main-font-size) * 1.25);
   font-weight: calc(var(--main-font-weight) + 100);
   @apply py-8;
+}
+
+.whyChooseCard p {
+  color: var(--Grayish-Blue);
 }
 
 #articles-container {
@@ -116,7 +166,7 @@ button {
 }
 
 .articleCardContent > .author {
-  font-size: calc(var(--sub-navigation-font-size) * .65) ;
+  font-size: calc(var(--sub-navigation-font-size) * 0.65);
   color: var(--Grayish-Blue);
 }
 
@@ -126,7 +176,6 @@ button {
   color: var(--Grayish-Blue);
   @apply py-2;
 }
-
 
 .articleCardContent > .description {
   font-size: calc(var(--sub-navigation-font-size) * 0.85);

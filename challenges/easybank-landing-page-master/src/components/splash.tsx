@@ -4,17 +4,19 @@ import Button from "./button";
 const Splash = () => {
   return (
     <section id="splash" className="flex">
-      <>
-        <LeftSplash />
-        <RightSplash />
-      </>
+      {/* <section id="splash-container"> */}
+        <>
+          <LeftSplash />
+          <RightSplash />
+        </>
+      {/* </section> */}
     </section>
   );
 };
 
 const LeftSplash = () => {
   return (
-    <section id="splash-left" className="flex-1 align-middle py-32">
+    <section id="splash-left" className="w-7/12">
       <h3 className="align-baseline"> Next generation digital banking</h3>
       <p>
         Take your financial life online. Your Easybank account will be a
@@ -29,11 +31,14 @@ const LeftSplash = () => {
 
 const RightSplash = () => {
   return (
-    <section id="splash-left" className="flex-1 align-middle">
-      <h1> photo meeee</h1>
+    <section id="splash-right" className="w-5/12">
+      {/* <div id="img-foreground-container"> */}
+      <img id="img-foreground" src="/images/image-mockups.png"></img>
+      {/* </div> */}
     </section>
   );
 };
 
-const SplashContainer = BodyContainer(Splash);
-export default SplashContainer;
+export default Splash;
+// const SplashContainer = BodyContainer(Splash);
+// export default SplashContainer;
