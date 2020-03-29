@@ -5,9 +5,11 @@ const ArticleCard = props => {
   return (
     <div className="articleCard flex-1">
       <img src={imgLocation} alt={title}></img>
-      <p>{author}</p>
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <div className="articleCardContent">
+        <p className="author">By {author}</p>
+        <h1 className="title">{title}</h1>
+        <p className="description">{description}</p>
+      </div>
     </div>
   );
 };

@@ -51,8 +51,8 @@ button {
   padding-right: var(--main-side-margins);
 }
 #splash-container {
-  /* background-color: var(--Very-Light-Gray); */
-  background-color: red;
+  background-color: var(--Very-Light-Gray);
+  /* background-color: red; */
 }
 
 #splash-left > h3 {
@@ -66,14 +66,15 @@ button {
 }
 
 #whyChoose-container {
-  background-color: lightgreen;
+  background-color: var(--Light-Grayish-Blue);
+  /* background-color: lightgreen; */
 }
 
 #whyChoose-top {
   @apply py-16;
 }
 #whyChoose-top h3 {
-  font-size: calc(var(--main-font-size) * 2);
+  font-size: calc(var(--main-font-size) * 2.25);
   @apply py-4;
 }
 
@@ -88,6 +89,9 @@ button {
   @apply py-8;
 }
 
+#articles-container {
+  background-color: var(--Very-Light-Gray);
+}
 
 #articles-top {
   /* copy  */
@@ -95,21 +99,36 @@ button {
 }
 
 #articles-top h3 {
-  font-size: calc(var(--main-font-size) * 2);
-  @apply py-8;
-}
-
-.articleCard h1 {
-  /* copy */
-  font-size: calc(var(--main-font-size) * 1.25);
-  font-weight: calc(var(--main-font-weight) + 100);
+  font-size: calc(var(--main-font-size) * 2.25);
   @apply py-8;
 }
 
 .articleCard img {
-  @apply rounded h-48 w-full;
+  @apply rounded-t h-48 w-full;
 }
 .articleCard {
-  background-color: purple;
-  @apply px-2;
+  background-color: var(--White);
+  @apply mr-8;
+}
+
+.articleCardContent {
+  @apply pt-8 pl-8 pr-8 pb-4;
+}
+
+.articleCardContent > .author {
+  font-size: calc(var(--sub-navigation-font-size) * .65) ;
+  color: var(--Grayish-Blue);
+}
+
+.articleCardContent > .title {
+  font-size: calc(var(--main-font-size) * 0.85);
+  font-weight: calc(var(--main-font-weight) + 300);
+  color: var(--Grayish-Blue);
+  @apply py-2;
+}
+
+
+.articleCardContent > .description {
+  font-size: calc(var(--sub-navigation-font-size) * 0.85);
+  color: var(--Grayish-Blue);
 }
