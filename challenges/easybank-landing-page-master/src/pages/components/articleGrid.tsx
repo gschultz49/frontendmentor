@@ -10,10 +10,11 @@ const ArticlesGrid = () => {
     fetch(formattedEndpoint)
       .then(res => res.json())
       .then(setCards);
-  });
+  }, []); // only run once
   return (
     <section id="articles-grid" className="flex flex-row">
       {articleCards.map(article => {
+        console.log(article);
         return <ArticlesCard key={article.img} card={article} />;
       })}
     </section>
