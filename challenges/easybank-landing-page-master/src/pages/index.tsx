@@ -1,6 +1,6 @@
 import Navigation from "../components/navigation";
 import Splash from "../components/splash";
-import { WhyChose } from "../components/whyChoose";
+import WhyChose from "../components/whyChoose";
 import { Articles } from "../components/articles";
 
 const App = () => {
@@ -9,8 +9,8 @@ const App = () => {
     <>
       <Navigation id={"navigation-container"} />
       <Splash id={"splash-container"} />
-      {/* <WhyChose />
-      <Articles /> */}
+      <WhyChose id={"whyChoose-container"} />
+      {/*<Articles /> */}
     </>
   );
 };

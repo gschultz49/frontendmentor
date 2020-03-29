@@ -56,12 +56,24 @@ button {
 }
 
 
-#splash-content > h3{
+#splash-left > h3{
   font-size: calc(var(--main-font-size) * 3.5);
   line-height: calc(var(--main-font-size) * 4.0);
 }
 
-#splash-content > p{
+#splash-left > p{
   font-size: calc(var(--main-font-size) * 1.25);
   @apply py-8;
+}
+
+
+#whyChoose-container{
+  background-color: lightgreen;
+}
+
+#whyChoose-top {
+  @apply py-20;
+}
+#whyChoose-top h3{
+  font-size: calc(var(--main-font-size) * 2.0)
 }
