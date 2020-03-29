@@ -69,21 +69,22 @@ button {
 }
 
 #splash-left > h3 {
-  font-size: calc(var(--main-font-size) * 3.5);
+  font-size: calc(var(--main-font-size) * 3.0);
   line-height: calc(var(--main-font-size) * 4);
 }
 
 #splash-left > p {
   font-size: calc(var(--main-font-size) * 1.25);
-  @apply py-8;
+  color: var(--Grayish-Blue);
+  @apply py-8 pr-20;
 }
 
 #splash-right {
-  width: 100%;
+  width: 70%;
   position: relative;
   background: url(/images/bg-intro-desktop.svg);
-  background-position: -20px -150px;
-  background-size: 48em;
+  background-position: -50px -205px;
+  background-size: 62em;
   background-repeat: no-repeat;
   padding-bottom: 30em;
   overflow:hidden;
@@ -93,8 +94,8 @@ button {
   position: absolute;
   top: -80px;
   -webkit-transform: translateX(100px);
-  transform: translateX(175px) scale(1.15);
-  width: 90%;
+  transform: translateX(165px) scale(1.15);
+  width: 85%;
   
 }
 #splash-right #img-foreground-container {
