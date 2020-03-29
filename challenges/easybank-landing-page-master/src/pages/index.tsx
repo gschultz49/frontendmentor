@@ -8,7 +8,7 @@ const App = () => {
     // this syntax is React fragments, enables a function to return multiple JSX elements
     <>
       <Navigation id={"navigation-container"} />
-      <Splash id={"navgiation-container"} />
+      <Splash id={"splash-container"} />
       {/* <WhyChose />
       <Articles /> */}
     </>
