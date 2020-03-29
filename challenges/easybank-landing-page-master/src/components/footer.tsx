@@ -4,7 +4,7 @@ import BodyContainer from "./body-container";
 const Footer = props => {
   return (
     <div id="footer" className="flex items-center">
-      <div id="footer-left" className="flex-1 py-6">
+      <div id="footer-left" className="w-3/12 py-6">
         <div className="footer-left-component">
           <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
             <defs>
@@ -59,7 +59,7 @@ const Footer = props => {
           ></img>
         </div>
       </div>
-      <div id="footer-center" className="flex-1 items-center text-left py-6">
+      <div id="footer-center" className="w-4/12 items-center text-left py-6">
         <div id="footer-links" className="grid grid-rows-3 grid-flow-col gap-4">
           <p>About Us</p>
           <p>Contact</p>
@@ -69,7 +69,7 @@ const Footer = props => {
           <p>Privacy Policy</p>
         </div>
       </div>
-      <div id="footer-right" className="flex-1">
+      <div id="footer-right" className="w-5/12">
         <section id="footer-button" className="flex justify-end">
           <Button label={"Request Invite"} />
         </section>
@@ -77,31 +77,6 @@ const Footer = props => {
           <p>© Easybank. All Rights Reserved</p>
         </section>
       </div>
-
-      {/* <div className="flex-1 text-center px-4 py-2 m-2">
-        <section id="sub-Footer" className="flex justify-between">
-          <a className="py-3" href="/">
-            Home
-          </a>
-          <a className="py-3" href="/">
-            About
-          </a>
-          <a className="py-3" href="/">
-            Contact
-          </a>
-          <a className="py-3" href="/">
-            Blog
-          </a>
-          <a className="py-3" href="/">
-            Careers
-          </a>
-        </section>
-      </div>
-      <div className="flex-1 px-4 py-3 m-2">
-        <section className="flex justify-end">
-          <Button label={"Request Invite"} />
-        </section>
-      </div> */}
     </div>
   );
 };
