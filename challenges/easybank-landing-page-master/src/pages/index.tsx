@@ -1,8 +1,8 @@
-import Navigation from "../components/navigation";
-import Splash from "../components/splash";
-import WhyChose from "../components/whyChoose";
-import Articles from "../components/articles";
-import Footer from "../components/footer";
+import Navigation from "./components/navigation";
+import Splash from "./components/splash";
+import WhyChose from "./components/whyChoose";
+import Articles from "./components/articles";
+import Footer from "./components/footer";
 
 const App = () => {
   return (
