@@ -35,7 +35,7 @@ body {
   font-size: var(--sub-navigation-font-size);
 }
 
-#navigation-container{
+#navigation-container {
   position: relative;
 }
 
@@ -60,16 +60,16 @@ button {
   /* background-color: red; */
 }
 
-#splash{
+#splash {
   padding-left: var(--main-side-margins);
 }
 
-#splash-left{
+#splash-left {
   @apply py-32 align-middle;
 }
 
 #splash-left > h3 {
-  font-size: calc(var(--main-font-size) * 3.0);
+  font-size: calc(var(--main-font-size) * 3);
   line-height: calc(var(--main-font-size) * 4);
 }
 
@@ -87,7 +87,7 @@ button {
   background-size: 62em;
   background-repeat: no-repeat;
   padding-bottom: 30em;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 #splash-right #img-foreground {
@@ -96,7 +96,6 @@ button {
   -webkit-transform: translateX(100px);
   transform: translateX(165px) scale(1.15);
   width: 85%;
-  
 }
 #splash-right #img-foreground-container {
   position: relative;
@@ -181,4 +180,32 @@ button {
 .articleCardContent > .description {
   font-size: calc(var(--sub-navigation-font-size) * 0.85);
   color: var(--Grayish-Blue);
+}
+
+#footer-container {
+  background-color: var(--Dark-Blue);
+}
+
+#footer-container #social img {
+  @apply h-6 w-6 mr-4;
+}
+/* #footer-left{
+  @apply py-8;
+} */
+
+.footer-left-component {
+  @apply py-8;
+}
+#footer-links p {
+  color: var(--White);
+}
+#footer-left p {
+  color: var(--Grayish-Blue);
+}
+#footer-button {
+  /* @apply py-8; */
+}
+#footer-copyright {
+  color: var(--Grayish-Blue);
+  @apply mt-10;
 }
