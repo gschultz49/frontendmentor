@@ -1,2 +1,8 @@
+<<<<<<< HEAD
+.DS_Store
+**/node_modules/
+**/.next
+=======
 node_modules/
 .next/
+>>>>>>> 8af40c837b6a5e116b7b5b80a43b2222a7ca0801

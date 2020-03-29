@@ -1,15 +1,17 @@
 import React from "react";
+import hoistNonReactStatics from "hoist-non-react-statics";
 
-interface id {
-  id: string;
-}
-
-const BodyContainer = (Component: React.FC<id>) => ({ id }: id) => {
+const BodyContainer = (Component: any) => props => {
   return (
-    <section id={id} className="body-container">
-      <Component id={id} />
+    <section id={props.id} className="body-container">
+      <Component {...props} />
     </section>
   );
 };
 
+// const hoistStatics = higherOrderComponent => BaseComponent => {
+//   const NewComponent = higherOrderComponent(BaseComponent);
+//   hoistNonReactStatics(NewComponent, BaseComponent);
+//   return NewComponent;
+// };
 export default BodyContainer;
