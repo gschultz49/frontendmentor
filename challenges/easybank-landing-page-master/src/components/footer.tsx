@@ -5,7 +5,7 @@ const Footer = props => {
   return (
     <div id="footer" className="flex items-center">
       <div id="footer-left" className="w-3/12 py-6">
-        <div className="footer-left-component">
+        <div className="footer-left-component py-8">
           <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
             <defs>
               <linearGradient
@@ -41,19 +41,27 @@ const Footer = props => {
         </div>
         <div id="social" className="flex justify-start footer-left-component py-8">
           <img
-            className=""
+            className="h-6 w-6 mr-4"
             src="/images/icon-facebook.svg"
             alt="facebook"
           ></img>
-          <img className="" src="/images/icon-youtube.svg" alt="youtube"></img>
-          <img className="" src="/images/icon-twitter.svg" alt="twitter"></img>
           <img
-            className=""
+            className="h-6 w-6 mr-4"
+            src="/images/icon-youtube.svg"
+            alt="youtube"
+          ></img>
+          <img
+            className="h-6 w-6 mr-4"
+            src="/images/icon-twitter.svg"
+            alt="twitter"
+          ></img>
+          <img
+            className="h-6 w-6 mr-4"
             src="/images/icon-pinterest.svg"
             alt="pinterest"
           ></img>
           <img
-            className=""
+            className="h-6 w-6 mr-4"
             src="/images/icon-instagram.svg"
             alt="instagram"
           ></img>
@@ -73,10 +81,23 @@ const Footer = props => {
         <section id="footer-button" className="flex justify-end">
           <Button label={"Request Invite"} />
         </section>
-        <section id="footer-copyright" className="flex justify-end">
+        <section id="footer-copyright" className="flex justify-end mt-10">
           <p>© Easybank. All Rights Reserved</p>
         </section>
       </div>
+      <style jsx>
+        {`
+          #footer-links p {
+            color: var(--White);
+          }
+          #footer-left p {
+            color: var(--Grayish-Blue);
+          }
+          #footer-copyright {
+            color: var(--Grayish-Blue);
+          }
+        `}
+      </style>
     </div>
   );
 };

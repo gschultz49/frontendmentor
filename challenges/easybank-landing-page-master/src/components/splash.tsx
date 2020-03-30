@@ -7,22 +7,40 @@ const Splash = () => {
         <LeftSplash />
         <RightSplash />
       </>
+      <style jsx>{`
+        #splash {
+          padding-left: var(--main-side-margins);
+          background-color: var(--Very-Light-Gray);
+        }
+      `}</style>
     </section>
   );
 };
 
 const LeftSplash = () => {
   return (
-    <section id="splash-left" className="w-7/12">
+    <section id="splash-left" className="w-7/12 py-32 align-middle">
       <h3> Next generation </h3>
       <h3> digital banking</h3>
-      <p>
+      <p className="py-8 pr-20">
         Take your financial life online. Your Easybank account will be a
         one-stop-shop for spending, saving, budgeting, investing, and much more.
       </p>
       <section>
         <Button label={"Request Invite"} />
       </section>
+      <style jsx>
+        {`
+          #splash-left > h3 {
+            font-size: calc(var(--main-font-size) * 3);
+            line-height: calc(var(--main-font-size) * 4);
+          }
+          #splash-left > p {
+            font-size: calc(var(--main-font-size) * 1.25);
+            color: var(--Grayish-Blue);
+          }
+        `}
+      </style>
     </section>
   );
 };
@@ -31,6 +49,29 @@ const RightSplash = () => {
   return (
     <section id="splash-right" className="w-5/12">
       <img id="img-foreground" src="/images/image-mockups.png"></img>
+      <style jsx>{`
+        #splash-right {
+          width: 70%;
+          position: relative;
+          background: url(/images/bg-intro-desktop.svg);
+          background-position: -50px -205px;
+          background-size: 62em;
+          background-repeat: no-repeat;
+          padding-bottom: 30em;
+          overflow: hidden;
+        }
+
+        #img-foreground {
+          position: absolute;
+          top: -80px;
+          -webkit-transform: translateX(100px);
+          transform: translateX(165px) scale(1.15);
+          width: 85%;
+        }
+        #img-foreground-container {
+          position: relative;
+        }
+      `}</style>
     </section>
   );
 };

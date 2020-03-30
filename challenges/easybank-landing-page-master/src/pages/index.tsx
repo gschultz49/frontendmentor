@@ -13,6 +13,44 @@ const App = () => {
       <WhyChose id={"whyChoose-container"} />
       <Articles id={"articles-container"} />
       <Footer id={"footer-container"} />
+      <style jsx global>
+        {`
+          :root {
+            --main-text-color: var(--Dark-Blue);
+            --Dark-Blue: hsl(233, 26%, 24%);
+            --Lime-Green: hsl(136, 65%, 51%);
+            --Bright-Cyan: hsl(192, 70%, 51%);
+            --Grayish-Blue: hsl(233, 8%, 62%);
+            --Light-Grayish-Blue: hsl(220, 16%, 96%);
+            --Very-Light-Gray: hsl(0, 0%, 98%);
+            --White: hsl(0, 0%, 100%);
+
+            --main-side-margins: 11%;
+            --main-font-size: 18px;
+            --main-font-weight: 300;
+
+            --sub-navigation-font-size: 16px;
+          }
+          body {
+            font-size: var(--main-font-size);
+            font-family: "Public Sans", sans-serif;
+            font-weight: var(--main-font-weight);
+          }
+          .body-container {
+            padding-left: var(--main-side-margins);
+            padding-right: var(--main-side-margins);
+          }
+          #whyChoose-container {
+            background-color: var(--Light-Grayish-Blue);
+          }
+          #articles-container {
+            background-color: var(--Very-Light-Gray);
+          }
+          #footer-container {
+            background-color: var(--Dark-Blue);
+          }
+        `}
+      </style>
     </>
   );
 };
