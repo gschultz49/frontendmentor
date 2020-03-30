@@ -39,7 +39,7 @@ const Footer = props => {
             </g>
           </svg>
         </div>
-        <div id="social" className="flex justify-start footer-left-component">
+        <div id="social" className="flex justify-start footer-left-component py-8">
           <img
             className=""
             src="/images/icon-facebook.svg"
