@@ -1,7 +1,7 @@
 import BodyContainer from "./body-container";
 import ArticlesGrid from "./articleGrid";
 
-const Articles = props => {
+const Articles = () => {
   return (
     <section id="articles-top">
       <>
@@ -17,4 +17,3 @@ const ArticlesTop = () => {
 };
 const ArticlesContainer = BodyContainer(Articles);
 export default ArticlesContainer;
-// export default Articles;
