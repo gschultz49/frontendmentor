@@ -1,5 +1,4 @@
 import React from "react";
-import hoistNonReactStatics from "hoist-non-react-statics";
 
 const BodyContainer = (Component: any) => props => {
   return (
@@ -9,9 +8,4 @@ const BodyContainer = (Component: any) => props => {
   );
 };
 
-// const hoistStatics = higherOrderComponent => BaseComponent => {
-//   const NewComponent = higherOrderComponent(BaseComponent);
-//   hoistNonReactStatics(NewComponent, BaseComponent);
-//   return NewComponent;
-// };
 export default BodyContainer;
