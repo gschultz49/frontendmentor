@@ -1,5 +1,5 @@
 import BodyContainer from "./body-container";
-import WhyChooseGrid from "../pages/serverRender/whyChooseGrid";
+import WhyChooseGrid from "./whyChooseGrid";
 
 const WhyChoose = () => {
   return (

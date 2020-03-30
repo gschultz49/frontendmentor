@@ -1,5 +1,5 @@
 import BodyContainer from "./body-container";
-import ArticlesGrid from "../pages/serverRender/articleGrid";
+import ArticlesGrid from "./articleGrid";
 
 const Articles = () => {
   return (

@@ -10,7 +10,7 @@ const App = () => {
     <>
       <Navigation id={"navigation-container"} />
       <Splash />
-      {/* <WhyChose id={"whyChoose-container"} /> */}
+      <WhyChose id={"whyChoose-container"} />
       <Articles id={"articles-container"} />
       <Footer id={"footer-container"} />
     </>
