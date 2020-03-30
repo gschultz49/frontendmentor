@@ -32,6 +32,17 @@ const Navigation = props => {
           <Button label={"Request Invite"} />
         </section>
       </div>
+      <style jsx>{`
+        #sub-navigation > a {
+          color: var(--Grayish-Blue);
+          font-weight: var(--main-font-weight);
+          font-size: var(--sub-navigation-font-size);
+        }
+
+        #navigation-container {
+          position: relative;
+        }
+      `}</style>
     </div>
   );
 };
