@@ -39,17 +39,6 @@ body {
   position: relative;
 }
 
-button {
-  font-size: calc(var(--main-font-size) - 2px);
-}
-.gradient-shift {
-  background-image: linear-gradient(
-    to right,
-    hsl(136, 65%, 51%),
-    hsl(192, 70%, 51%)
-  );
-}
-
 .body-container {
   padding-left: var(--main-side-margins);
   padding-right: var(--main-side-margins);
