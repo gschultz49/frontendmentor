@@ -7,7 +7,7 @@ export default function Button({ label, py = 3, px = 8 }) {
       <style jsx>
         {`
           button {
-            font-size: calc(${sharedStyles.mainFontSize} - 2px)
+            font-size: calc(${sharedStyles.mainFontSize} - 2px);
           }
           .gradient-shift {
             background-image: linear-gradient(
