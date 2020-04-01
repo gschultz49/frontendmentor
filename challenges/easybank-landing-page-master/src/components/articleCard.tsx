@@ -1,5 +1,4 @@
 const ArticleCard = props => {
-  console.log(props);
   const { img, author, title, description } = props.card;
   const imgLocation = `/images/${img}`;
 

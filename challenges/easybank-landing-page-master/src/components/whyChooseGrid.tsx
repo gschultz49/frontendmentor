@@ -1,27 +1,26 @@
-import { whyChooseCard } from "../pages/api/get-whychoose";
-import { useState, useEffect } from "react";
 import WhyChooseCard from "./whyChooseCard";
-import fetch from "isomorphic-fetch";
+import useSWR from "swr";
+import { fetcher } from "../utils/api-fetcher";
 
-const WhyChooseGrid = () => {
-  const [whyChooseCards, setCards] = useState<whyChooseCard[]>([]);
+const GetWhyChooseCardsEndpoint = "/api/get-whychoose";
 
-  useEffect(() => {
-    const endpoint = "/api/get-whychoose";
-    fetch(endpoint)
-      .then(res => res.json())
-      .then(setCards)
-      .catch(err => {
-        console.log(err);
-      });
-  }, []); // only run once
+const WhyChooseGrid = props => {
+  const initialData = props.data;
+  const { data = [] } = useSWR(GetWhyChooseCardsEndpoint, fetcher, {
+    initialData
+  });
   return (
     <section id="whyChoose-grid" className="flex flex-row">
-      {whyChooseCards.map((card, idx) => {
+      {data.map((card, idx) => {
         return <WhyChooseCard key={idx} card={card} />;
       })}
     </section>
   );
 };
+
+export async function getServerSideProps() {
+  const data = await fetcher(GetWhyChooseCardsEndpoint);
+  return { props: { data } };
+}
 
 export default WhyChooseGrid;

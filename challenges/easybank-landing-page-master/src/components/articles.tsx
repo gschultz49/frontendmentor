@@ -1,4 +1,3 @@
-import useSWR, { SWRConfig } from "swr";
 import BodyContainer from "./body-container";
 import ArticlesGrid from "./articleGrid";
 
@@ -7,13 +6,7 @@ const Articles = () => {
     <section id="articles-top" className="py-16">
       <>
         <ArticlesTop />
-        <SWRConfig
-          value={{
-            refreshInterval: 3000
-          }}
-        >
-          <ArticlesGrid />
-        </SWRConfig>
+        <ArticlesGrid />
       </>
     </section>
   );

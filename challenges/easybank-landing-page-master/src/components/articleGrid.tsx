@@ -1,18 +1,24 @@
 import ArticleCard from "./articleCard";
-import fetch from "isomorphic-fetch";
 import useSWR from "swr";
+import { fetcher } from "../utils/api-fetcher";
 
-const fetcher = url => fetch(url).then(r => r.json());
+const GetArticlesEndpoint = "/api/get-articles";
 
-const ArticlesGrid = () => {
-  const { data = [], error } = useSWR("/api/get-articles", fetcher);
+const ArticlesGrid = props => {
+  const initialData = props.data;
+  const { data = [] } = useSWR(GetArticlesEndpoint, fetcher, { initialData });
   return (
     <section id="articles-grid" className="flex flex-row">
-      {error && console.log(error)}
       {data.map((article, idx) => {
         return <ArticleCard key={idx} card={article} />;
       })}
     </section>
   );
 };
+
+export async function getServerSideProps() {
+  const data = await fetcher(GetArticlesEndpoint);
+  return { props: { data } };
+}
+
 export default ArticlesGrid;
