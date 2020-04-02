@@ -1,12 +1,12 @@
 import BodyContainer from "./body-container";
 import WhyChooseGrid from "./whyChooseGrid";
 
-const WhyChoose = () => {
+const WhyChoose = ({ whyChoose }) => {
   return (
     <section id="whyChoose" className="py-16">
       <>
         <WhyChooseTop />
-        <WhyChooseGrid />
+        <WhyChooseGrid whyChoose={whyChoose} />
       </>
     </section>
   );
