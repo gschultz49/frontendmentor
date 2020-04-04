@@ -1,9 +1,9 @@
-import { fetcher, BASE_URL } from "../utils/api-fetcher";
-import { GetWhyChooseCardsEndpoint } from "../../pages/api/easybank/easybank-utils";
+import { getEndpoint } from "./easybank-api-utils";
+import { fetcher } from "../utils";
 
-export default async function GetWhyChooseData(
-  url = GetWhyChooseCardsEndpoint
-) {
-  const whyChoose = await fetcher(`${BASE_URL}${url}`);
-  return whyChoose;
+export const getWhyChooseFileName = "/get-whyChoose";
+
+export default async function GetWhyChooseData() {
+  const fullEndpointUrl = getEndpoint(getWhyChooseFileName);
+  return await fetcher(fullEndpointUrl);
 }
