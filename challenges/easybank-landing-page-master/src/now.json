@@ -1,5 +1,7 @@
 {
-  "env": {
-    "BASE_URL": "@base_url"
+  "build": {
+    "env": {
+      "BASE_URL": "@base_url"
+    }
   }
 }
