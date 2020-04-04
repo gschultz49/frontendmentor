@@ -1,7 +1,13 @@
 import Button from "./button";
 import BodyContainer from "./body-container";
+import { getImage } from "../../../../pages/api/easybank/easybank-utils";
 
 const Footer = props => {
+  const facebookImageSrc = getImage("icon-facebook.svg");
+  const youtubeImageSrc = getImage("icon-youtube.svg");
+  const twitterImageSrc = getImage("icon-twitter.svg");
+  const pinterestImageSrc = getImage("icon-pinterest.svg");
+  const instagramImageSrc = getImage("icon-instagram.svg");
   return (
     <div id="footer" className="flex items-center">
       <div id="footer-left" className="w-3/12 py-6">
@@ -39,30 +45,33 @@ const Footer = props => {
             </g>
           </svg>
         </div>
-        <div id="social" className="flex justify-start footer-left-component py-8">
+        <div
+          id="social"
+          className="flex justify-start footer-left-component py-8"
+        >
           <img
             className="h-6 w-6 mr-4"
-            src="/images/icon-facebook.svg"
+            src={facebookImageSrc}
             alt="facebook"
           ></img>
           <img
             className="h-6 w-6 mr-4"
-            src="/images/icon-youtube.svg"
+            src={youtubeImageSrc}
             alt="youtube"
           ></img>
           <img
             className="h-6 w-6 mr-4"
-            src="/images/icon-twitter.svg"
+            src={twitterImageSrc}
             alt="twitter"
           ></img>
           <img
             className="h-6 w-6 mr-4"
-            src="/images/icon-pinterest.svg"
+            src={pinterestImageSrc}
             alt="pinterest"
           ></img>
           <img
             className="h-6 w-6 mr-4"
-            src="/images/icon-instagram.svg"
+            src={instagramImageSrc}
             alt="instagram"
           ></img>
         </div>

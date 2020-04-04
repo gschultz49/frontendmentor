@@ -1,14 +1,12 @@
-import Navigation from "../components/navigation";
-import Splash from "../components/splash";
-import WhyChose from "../components/whyChoose";
-import Articles from "../components/articles";
-import Footer from "../components/footer";
-import GetArticlesGridData from "../services/getArticles";
-import GetWhyChooseData from "../services/getWhyChoose";
-import { useRouter } from "next/router";
+import Navigation from "../challenges/easybank/src/components/navigation";
+import Splash from "../challenges/easybank/src/components/splash";
+import WhyChose from "../challenges/easybank/src/components/whyChoose";
+import Articles from "../challenges/easybank/src/components/articles";
+import Footer from "../challenges/easybank/src/components/footer";
+import GetArticlesGridData from "../services/easybank/getArticles";
+import GetWhyChooseData from "../services/easybank/getWhyChoose";
 
 const App = props => {
-  const router = useRouter();
   return (
     // this syntax is React fragments, enables a function to return multiple JSX elements
     <>
@@ -59,7 +57,7 @@ const App = props => {
   );
 };
 
-export async function getStaticProps(ctx) {
+export async function getStaticProps() {
   const articles = await GetArticlesGridData();
   const whyChoose = await GetWhyChooseData();
   const payload = {

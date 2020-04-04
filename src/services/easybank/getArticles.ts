@@ -1,6 +1,5 @@
-import { fetcher, BASE_URL } from "./utils/api-fetcher";
-
-export const GetArticlesEndpoint = "/api/get-articles";
+import { BASE_URL, fetcher } from "../utils/api-fetcher";
+import { GetArticlesEndpoint } from "../../pages/api/easybank/easybank-utils";
 
 export default async function GetArticlesGridData(url = GetArticlesEndpoint) {
   const articles = await fetcher(`${BASE_URL}${url}`);
