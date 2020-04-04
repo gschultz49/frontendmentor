@@ -1,4 +1,5 @@
 import Button from "./button";
+import { getImage } from "../../../../pages/api/easybank/easybank-utils";
 
 const Splash = () => {
   return (
@@ -46,14 +47,16 @@ const LeftSplash = () => {
 };
 
 const RightSplash = () => {
+  const mockupImageSrc = getImage("image-mockups.png");
+  const backgroundIntroImageSrc = getImage("bg-intro-desktop.svg");
   return (
     <section id="splash-right" className="w-5/12">
-      <img id="img-foreground" src="/images/image-mockups.png"></img>
+      <img id="img-foreground" src={mockupImageSrc}></img>
       <style jsx>{`
         #splash-right {
           width: 70%;
           position: relative;
-          background: url(/images/bg-intro-desktop.svg);
+          background: url(${backgroundIntroImageSrc});
           background-position: -50px -205px;
           background-size: 62em;
           background-repeat: no-repeat;

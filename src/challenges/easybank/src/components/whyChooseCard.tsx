@@ -1,6 +1,8 @@
+import { getImage } from "../../../../pages/api/easybank/easybank-utils";
+
 const WhyChooseCard = props => {
   const { img, title, description } = props.card;
-  const imgLocation = `/images/${img}`;
+  const imgLocation = getImage(img);
 
   return (
     <div className="whyChooseCard flex-1 mr-10">
