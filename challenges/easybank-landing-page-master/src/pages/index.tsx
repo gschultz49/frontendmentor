@@ -5,8 +5,10 @@ import Articles from "../components/articles";
 import Footer from "../components/footer";
 import GetArticlesGridData from "../services/getArticles";
 import GetWhyChooseData from "../services/getWhyChoose";
+import { useRouter } from "next/router";
 
 const App = props => {
+  const router = useRouter();
   return (
     // this syntax is React fragments, enables a function to return multiple JSX elements
     <>
@@ -57,7 +59,7 @@ const App = props => {
   );
 };
 
-export async function getStaticProps() {
+export async function getStaticProps(ctx) {
   const articles = await GetArticlesGridData();
   const whyChoose = await GetWhyChooseData();
   const payload = {
