@@ -1,11 +1,10 @@
-import { fetcher } from "./utils/api-fetcher";
+import { fetcher, BASE_URL } from "./utils/api-fetcher";
 
 export const GetWhyChooseCardsEndpoint = "/api/get-whychoose";
 
 export default async function GetWhyChooseData(
   url = GetWhyChooseCardsEndpoint
 ) {
-  const baseUrl = "http://localhost:3000";
-  const whyChoose = await fetcher(`${baseUrl}${url}`);
+  const whyChoose = await fetcher(`${BASE_URL}${url}`);
   return whyChoose;
 }
