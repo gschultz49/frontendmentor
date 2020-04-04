@@ -3,15 +3,19 @@ import Splash from "../components/splash";
 import WhyChose from "../components/whyChoose";
 import Articles from "../components/articles";
 import Footer from "../components/footer";
+import GetArticlesGridData from "../services/getArticles";
+import GetWhyChooseData from "../services/getWhyChoose";
+import { useRouter } from "next/router";
 
-const App = () => {
+const App = props => {
+  const router = useRouter();
   return (
     // this syntax is React fragments, enables a function to return multiple JSX elements
     <>
       <Navigation id={"navigation-container"} />
       <Splash />
-      <WhyChose id={"whyChoose-container"} />
-      <Articles id={"articles-container"} />
+      <WhyChose id={"whyChoose-container"} whyChoose={props.whyChoose} />
+      <Articles id={"articles-container"} articles={props.articles} />
       <Footer id={"footer-container"} />
       <style jsx global>
         {`
@@ -54,5 +58,17 @@ const App = () => {
     </>
   );
 };
+
+export async function getStaticProps(ctx) {
+  const articles = await GetArticlesGridData();
+  const whyChoose = await GetWhyChooseData();
+  const payload = {
+    props: {
+      articles: articles,
+      whyChoose: whyChoose
+    }
+  };
+  return payload;
+}
 
 export default App;
