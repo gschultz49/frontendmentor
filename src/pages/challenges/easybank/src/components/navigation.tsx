@@ -1,6 +1,6 @@
 import Button from "./button";
 import BodyContainer from "./body-container";
-import { getImage } from "../../../../services/easybank/easybank-api-utils";
+import { getImage } from "../../../../../services/easybank/easybank-api-utils";
 
 const Navigation = props => {
   const logoImageSource = getImage("logo.svg");

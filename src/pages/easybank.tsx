@@ -1,8 +1,8 @@
-import Navigation from "../challenges/easybank/src/components/navigation";
-import Splash from "../challenges/easybank/src/components/splash";
-import WhyChose from "../challenges/easybank/src/components/whyChoose";
-import Articles from "../challenges/easybank/src/components/articles";
-import Footer from "../challenges/easybank/src/components/footer";
+import Navigation from "./challenges/easybank/src/components/navigation";
+import Splash from "./challenges/easybank/src/components/splash";
+import WhyChose from "./challenges/easybank/src/components/whyChoose";
+import Articles from "./challenges/easybank/src/components/articles";
+import Footer from "./challenges/easybank/src/components/footer";
 import GetArticlesGridData from "../services/easybank/getArticles";
 import GetWhyChooseData from "../services/easybank/getWhyChoose";
 

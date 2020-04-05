@@ -1,5 +1,5 @@
 import Button from "./button";
-import { getImage } from "../../../../services/easybank/easybank-api-utils";
+import { getImage } from "../../../../../services/easybank/easybank-api-utils";
 
 const Splash = () => {
   return (
