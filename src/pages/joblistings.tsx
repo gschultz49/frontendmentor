@@ -9,7 +9,6 @@ const App = (props) => {
       <CSSHead />
       <Navigation />
       <JobListingContainer joblistings={props.joblistings} />
-      {/* <h1>Job Listings: {JSON.stringify(props.joblistings)}</h1> */}
       <style></style>
       <style jsx global>
         {`

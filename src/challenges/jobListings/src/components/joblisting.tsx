@@ -1,7 +1,7 @@
 import { getImage } from "../../../../services/joblistings/joblistings-api-utils";
 import LogoImage from "./joblisting-logo";
 import JobListingInformation from "./joblisting-information";
-
+import JobListingTags from "./joblisting-tags";
 const JobListing = ({ job }) => {
   const imgSrc = getImage(job.logo);
   return (
@@ -14,7 +14,14 @@ const JobListing = ({ job }) => {
       <div className="w-4/12 pl-4">
         <JobListingInformation {...job} />
       </div>
-      <div className="w-7/12 bg-gray-400 h-12">{JSON.stringify(job)}</div>
+      <div className="w-7/12 bg-gray-400 h-full">
+        <JobListingTags
+          role={job.role}
+          level={job.level}
+          languages={job.languages}
+          tools={job.tools}
+        />
+      </div>
 
       <style jsx>{`
         section {
