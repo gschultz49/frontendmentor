@@ -23,12 +23,6 @@ const JobListing = ({ job, updateTags }) => {
           updateTags={updateTags}
         />
       </div>
-
-      <style jsx>{`
-        section {
-          background-color: white;
-        }
-      `}</style>
     </section>
   );
 };

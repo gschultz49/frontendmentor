@@ -1,3 +1,4 @@
+import Tag from "./tag";
 import { useState } from "react";
 
 const JobListingTags = ({
@@ -36,16 +37,6 @@ const JobListingTags = ({
 export default JobListingTags;
 
 const TagSpacer = ({ text, updateTags }) => {
-  return (
-    <div className="px-1">
-      <div className="text-center p-1">
-        <Tag text={text} updateTags={updateTags} />
-      </div>
-    </div>
-  );
-};
-
-const Tag = ({ text, updateTags }) => {
   const [isSelected, toggle] = useState(false);
 
   const selectTag = (e) => {
@@ -54,32 +45,17 @@ const Tag = ({ text, updateTags }) => {
   };
 
   const selectionBackgroundColor = isSelected ? "isSelected" : "isNotSelected";
-  const sectionClass = `rounded-sm ${selectionBackgroundColor}`;
+  const backgroundColor = `rounded-sm ${selectionBackgroundColor}`;
 
   return (
-    <section className={sectionClass}>
-      <p className="px-2 py-1 inline-block align-middle" onClick={selectTag}>
-        {text}
-      </p>
-      <style jsx>{`
-        .isSelected {
-          background-color: var(--Desaturated-Dark-Cyan);
-        }
-        .isNotSelected {
-          background-color: var(--Light-Grayish-Cyan-Background);
-        }
-        .isSelected p {
-          color: white;
-        }
-        .isNotSelected p {
-          color: var(--Desaturated-Dark-Cyan);
-        }
-        p {
-          font-size: 12px;
-          font-weight: bold;
-          cursor: pointer;
-        }
-      `}</style>
-    </section>
+    <div className="px-1">
+      <div className="text-center p-1">
+        <Tag
+          text={text}
+          updateTags={selectTag}
+          backgroundColor={backgroundColor}
+        />
+      </div>
+    </div>
   );
 };
