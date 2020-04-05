@@ -2,7 +2,7 @@ import Button from "./button";
 import BodyContainer from "./body-container";
 import { getImage } from "../../../../services/easybank/easybank-api-utils";
 
-const Footer = (props) => {
+const Footer = (props) =>              {
   const facebookImageSrc = getImage("icon-facebook.svg");
   const youtubeImageSrc = getImage("icon-youtube.svg");
   const twitterImageSrc = getImage("icon-twitter.svg");
