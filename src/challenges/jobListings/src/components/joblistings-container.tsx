@@ -41,12 +41,16 @@ const JobListingContainer = ({ joblistings }) => {
     return shouldShow;
   };
 
-  const shouldShowJobListing = (job) => {
+  const shouldShowJobListing = (job, filterByAND = true) => {
     const jobTags = getJobTags(job);
     if (selectedTags.length === 0) {
       return true;
     }
-    return filterAnd(jobTags);
+    if (filterByAND) {
+      return filterAnd(jobTags);
+    } else {
+      return filterOr(jobTags);
+    }
   };
 
   return (
@@ -55,7 +59,10 @@ const JobListingContainer = ({ joblistings }) => {
         id="joblistings-container"
         className="flex flex-wrap mx-48 mt-20 mb-20"
       >
-        <JobFilter selectedTags={selectedTags} removeTag={removeTag} />
+        {selectedTags.length > 0 && (
+          <JobFilter selectedTags={selectedTags} removeTag={removeTag} />
+        )}
+
         {joblistings.map((job, idx) => {
           if (shouldShowJobListing(job)) {
             return <JobListing key={idx} job={job} updateTags={updateTags} />;
@@ -63,11 +70,6 @@ const JobListingContainer = ({ joblistings }) => {
             return null;
           }
         })}
-        <style jsx>{`
-          section {
-            background-color: white;
-          }
-        `}</style>
       </section>
     </>
   );

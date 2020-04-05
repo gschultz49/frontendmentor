@@ -3,7 +3,7 @@ import { getImage } from "../../../../services/joblistings/joblistings-api-utils
 
 const JobFilter = ({ selectedTags, removeTag }) => {
   return (
-    <section className="flex w-full p-8 shadow-xl">
+    <section className="flex w-full p-8 my-4 shadow-xl">
       {selectedTags.map((tag) => {
         return (
           <JobFilterTagSpacing
@@ -13,6 +13,11 @@ const JobFilter = ({ selectedTags, removeTag }) => {
           />
         );
       })}
+      <style jsx>{`
+        section {
+          background-color: white;
+        }
+      `}</style>
     </section>
   );
 };
@@ -46,7 +51,6 @@ const JobFilterTag = ({ text, backgroundColor, removeTag }) => {
       <style jsx>{`
         .filterTagRemove {
           background-color: black;
-          cursor: pointer;
         }
       `}</style>
     </div>
