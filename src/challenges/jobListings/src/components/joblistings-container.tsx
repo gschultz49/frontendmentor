@@ -21,6 +21,34 @@ const JobListingContainer = ({ joblistings }) => {
     setCollectedTags(withRemovedTag);
   };
 
+  const getJobTags = ({ role, level, languages = [], tools = [] }) => {
+    return [role, level, ...languages, ...tools];
+  };
+
+  // logical AND search for filtering
+  const filterAnd = (jobTags) => {
+    return selectedTags.every((val) => jobTags.includes(val));
+  };
+
+  // logical OR search for filtering
+  const filterOr = (jobTags) => {
+    let shouldShow = false;
+    jobTags.forEach((tag) => {
+      if (selectedTags.includes(tag)) {
+        shouldShow = true;
+      }
+    });
+    return shouldShow;
+  };
+
+  const shouldShowJobListing = (job) => {
+    const jobTags = getJobTags(job);
+    if (selectedTags.length === 0) {
+      return true;
+    }
+    return filterAnd(jobTags);
+  };
+
   return (
     <>
       <section
@@ -29,7 +57,11 @@ const JobListingContainer = ({ joblistings }) => {
       >
         <JobFilter selectedTags={selectedTags} removeTag={removeTag} />
         {joblistings.map((job, idx) => {
-          return <JobListing key={idx} job={job} updateTags={updateTags} />;
+          if (shouldShowJobListing(job)) {
+            return <JobListing key={idx} job={job} updateTags={updateTags} />;
+          } else {
+            return null;
+          }
         })}
         <style jsx>{`
           section {

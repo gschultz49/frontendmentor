@@ -46,6 +46,7 @@ const JobFilterTag = ({ text, backgroundColor, removeTag }) => {
       <style jsx>{`
         .filterTagRemove {
           background-color: black;
+          cursor: pointer;
         }
       `}</style>
     </div>
