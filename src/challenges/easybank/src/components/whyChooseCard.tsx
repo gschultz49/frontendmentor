@@ -1,4 +1,4 @@
-import { getImage } from "../../../../../services/easybank/easybank-api-utils";
+import { getImage } from "../../../../services/easybank/easybank-api-utils";
 
 const WhyChooseCard = props => {
   const { img, title, description } = props.card;
