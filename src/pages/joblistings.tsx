@@ -1,27 +1,26 @@
 import GetJobListingData from "../services/joblistings/getJobListings";
+import CSSHead from "../challenges/jobListings/src/components/head";
 
 const App = (props) => {
   return (
-    // this syntax is React fragments, enables a function to return multiple JSX elements
     <>
+      <CSSHead />
       <h1>Job Listings: {JSON.stringify(props.joblistings)}</h1>
+      <style></style>
       <style jsx global>
         {`
           :root {
-            --main-text-color: var(--Dark-Blue);
-            --Dark-Blue: hsl(233, 26%, 24%);
-            --Lime-Green: hsl(136, 65%, 51%);
-            --Bright-Cyan: hsl(192, 70%, 51%);
-            --Grayish-Blue: hsl(233, 8%, 62%);
-            --Light-Grayish-Blue: hsl(220, 16%, 96%);
-            --Very-Light-Gray: hsl(0, 0%, 98%);
-            --White: hsl(0, 0%, 100%);
+            --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
 
-            --main-side-margins: 11%;
-            --main-font-size: 18px;
-            --main-font-weight: 300;
+            --Light-Grayish-Cyan-Background: hsl(180, 52%, 96%);
+            --Light-Grayish-Cyan-Filter-Tablets: hsl(180, 31%, 95%);
+            --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+            --Very-Dark-Grayish Cyan: hsl(180, 14%, 20%);
 
-            --sub-navigation-font-size: 16px;
+            --Font-Size: 15px;
+          }
+          body{
+            font-family: 'Spartan', sans-serif;
           }
         `}
       </style>
