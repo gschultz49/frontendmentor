@@ -1,7 +1,7 @@
 // files don't necessarily need an extension
 // const checkExtension = fileName => {
 //   const extensionRegex = /.[0-9a-z]+$/i;
-  
+
 //   const possibleExtension = fileName.match(extensionRegex)[0];
 //   console.log(possibleExtension);
 //   if (!(possibleExtension.length > 1)) {
@@ -12,7 +12,7 @@
 //   }
 // };
 
-const checkLeadingSlash = fileName => {
+const checkLeadingSlash = (fileName) => {
   if (fileName[0] === "/" || fileName[0] === "\\" || fileName[0] === ".") {
     console.warn(`Bad leading character: "${fileName[0]}"`);
     return false;

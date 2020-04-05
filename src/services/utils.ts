@@ -20,7 +20,7 @@ export const setApiBaseForProject = (apiDir: string) => {
   };
 };
 
-export const fetcher = url =>
+export const fetcher = (url) =>
   fetch(url)
-    .then(r => r.json())
-    .catch(err => console.warn(err));
+    .then((r) => r.json())
+    .catch((err) => console.warn(err));

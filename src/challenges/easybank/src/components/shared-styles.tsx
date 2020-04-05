@@ -9,7 +9,7 @@ const sharedStyles = {
   mainSideMargins: "11%",
   mainFontSize: "18px",
   mainFontHeight: "300",
-  subNavigationFont: "size: 16px"
+  subNavigationFont: "size: 16px",
 };
 
 export default sharedStyles;

@@ -2,7 +2,7 @@ import Button from "./button";
 import BodyContainer from "./body-container";
 import { getImage } from "../../../../services/easybank/easybank-api-utils";
 
-const Navigation = props => {
+const Navigation = (props) => {
   const logoImageSource = getImage("logo.svg");
   return (
     <div className="flex items-center">

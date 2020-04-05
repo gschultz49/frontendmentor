@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write 'pages/**/*.{tsx,ts}'  'challenges/**/*.{tsx,ts}' 'services/**/*.{tsx,ts}'"
   },
   "keywords": [],
   "author": "",
@@ -24,8 +25,22 @@
     "@types/node": "^13.9.5",
     "@types/react": "^16.9.26",
     "hoist-non-react-statics": "^3.3.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.1",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.2",
     "tailwindcss": "^1.2.0",
     "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

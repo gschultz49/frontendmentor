@@ -1,7 +1,7 @@
 import {
   API_BASE,
   setImagesDirectoryForProject,
-  setApiBaseForProject
+  setApiBaseForProject,
 } from "../utils";
 
 export const PROJECT_DIR_NAME = "/easybank";

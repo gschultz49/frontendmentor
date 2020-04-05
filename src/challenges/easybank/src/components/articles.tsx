@@ -1,7 +1,7 @@
 import BodyContainer from "./body-container";
 import ArticlesGrid from "./articleGrid";
 
-const Articles = props => {
+const Articles = (props) => {
   return (
     <section id="articles-top" className="py-16">
       <>

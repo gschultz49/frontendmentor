@@ -6,7 +6,7 @@ import Footer from "../challenges/easybank/src/components/footer";
 import GetArticlesGridData from "../services/easybank/getArticles";
 import GetWhyChooseData from "../services/easybank/getWhyChoose";
 
-const App = props => {
+const App = (props) => {
   return (
     // this syntax is React fragments, enables a function to return multiple JSX elements
     <>
@@ -63,8 +63,8 @@ export async function getStaticProps() {
   const payload = {
     props: {
       articles: articles,
-      whyChoose: whyChoose
-    }
+      whyChoose: whyChoose,
+    },
   };
   return payload;
 }
