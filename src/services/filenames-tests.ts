@@ -3,14 +3,14 @@ import { isValidImage } from "./imageUtils";
 const goodFilesNames = [
   "good-image.png",
   "good-image",
-  "good-image.fl;dhgjlfhdskjghlfkz"
+  "good-image.fl;dhgjlfhdskjghlfkz",
 ];
 
 const badFilesNames = [
   "/badslash.png",
   "////lotsofslashes.png",
   ".png",
-  "jfhdskjghkdfs"
+  "jfhdskjghkdfs",
 ];
 
 // goodFilesNames.forEach(retrieveImage);
