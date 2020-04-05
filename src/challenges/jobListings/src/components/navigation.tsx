@@ -2,7 +2,6 @@ import { getImage } from "../../../../services/joblistings/joblistings-api-utils
 
 const Navigation = () => {
   const backgroundLogoImageSource = getImage("bg-header-desktop.svg");
-  console.log(backgroundLogoImageSource);
   return (
     <div id="background" className="h-40">
       <div id="background-image" className="h-full w-full"></div>

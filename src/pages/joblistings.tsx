@@ -1,13 +1,15 @@
 import GetJobListingData from "../services/joblistings/getJobListings";
 import CSSHead from "../challenges/jobListings/src/components/head";
 import Navigation from "../challenges/jobListings/src/components/navigation";
+import JobListingContainer from "../challenges/jobListings/src/components/joblistings-container";
 
 const App = (props) => {
   return (
     <>
       <CSSHead />
       <Navigation />
-      <h1>Job Listings: {JSON.stringify(props.joblistings)}</h1>
+      <JobListingContainer joblistings={props.joblistings} />
+      {/* <h1>Job Listings: {JSON.stringify(props.joblistings)}</h1> */}
       <style></style>
       <style jsx global>
         {`
@@ -23,6 +25,7 @@ const App = (props) => {
           }
           body{
             font-family: 'Spartan', sans-serif;
+            background-color: var(--Light-Grayish-Cyan-Background);
           }
         `}
       </style>
