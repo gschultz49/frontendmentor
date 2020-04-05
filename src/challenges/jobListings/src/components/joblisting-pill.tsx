@@ -1,9 +1,9 @@
 const Pill = ({ text }) => {
   const pillTypeCss = text === "NEW!" ? "pill-new" : "pill-featured";
-  const pillClass = `rounded-full  ${pillTypeCss}`;
+  const pillClass = `rounded-full ${pillTypeCss}`;
   return (
     <div className={pillClass}>
-      <p className="px-2 inline-block align-middle">{text}</p>
+      <p className="px-2 inline-block">{text}</p>
       <style jsx>{`
         p {
           color: white;

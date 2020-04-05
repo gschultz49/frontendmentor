@@ -9,6 +9,7 @@ const JobDetails = ({ postedAt, contract, location }) => {
       <style jsx>{`
         p {
           font-size: 12px;
+          color: var(--Dark-Grayish-Cyan);
         }
       `}</style>
     </div>

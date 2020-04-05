@@ -4,17 +4,17 @@ import Pill from "./joblisting-pill";
 const JobListingInformation = (props) => {
   return (
     <div className="flex flex-wrap">
-      <div className="w-full py-1 bg-gray-500">
+      <div className="w-full py-1">
         <div className="flex">
           <h2 className="company mr-2">{props.company}</h2>
           {props.new && <PillSpacer text="NEW!"></PillSpacer>}
           {props.featured && <PillSpacer text="FEATURED"></PillSpacer>}
         </div>
       </div>
-      <div className="w-full py-1 bg-gray-400">
+      <div className="w-full py-1">
         <h1 className="position">{props.position}</h1>
       </div>
-      <div className="w-full py-1 bg-gray-500">
+      <div className="w-full py-1">
         <JobDetails
           postedAt={props.postedAt}
           contract={props.contract}

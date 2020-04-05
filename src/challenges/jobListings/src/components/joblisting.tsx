@@ -5,7 +5,7 @@ import JobListingTags from "./joblisting-tags";
 const JobListing = ({ job }) => {
   const imgSrc = getImage(job.logo);
   return (
-    <section className="flex w-full my-4 p-12 shadow-xl">
+    <section className="flex w-full my-4 p-8 shadow-xl">
       <div className="w-1/12">
         <div className="flex flex-wrap">
           <LogoImage img={imgSrc} company={job.company} />
@@ -14,7 +14,7 @@ const JobListing = ({ job }) => {
       <div className="w-4/12 pl-4">
         <JobListingInformation {...job} />
       </div>
-      <div className="w-7/12 bg-gray-400 h-full">
+      <div className="w-7/12 h-full">
         <JobListingTags
           role={job.role}
           level={job.level}
