@@ -2,7 +2,7 @@ import { getImage } from "../../../../services/joblistings/joblistings-api-utils
 import LogoImage from "./joblisting-logo";
 import JobListingInformation from "./joblisting-information";
 import JobListingTags from "./joblisting-tags";
-const JobListing = ({ job }) => {
+const JobListing = ({ job, updateTags }) => {
   const imgSrc = getImage(job.logo);
   return (
     <section className="flex w-full my-4 p-8 shadow-xl">
@@ -20,6 +20,7 @@ const JobListing = ({ job }) => {
           level={job.level}
           languages={job.languages}
           tools={job.tools}
+          updateTags={updateTags}
         />
       </div>
 

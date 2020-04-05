@@ -1,13 +1,33 @@
-const JobListingTags = ({ role, level, languages = [], tools = [] }) => {
+import { useState } from "react";
+
+const JobListingTags = ({
+  role,
+  level,
+  updateTags,
+  languages = [],
+  tools = [],
+}) => {
   return (
     <div className="flex content-center justify-end h-full flex-wrap">
-      <TagSpacer text={role}></TagSpacer>
-      <TagSpacer text={level}></TagSpacer>
+      <TagSpacer updateTags={updateTags} text={role}></TagSpacer>
+      <TagSpacer updateTags={updateTags} text={level}></TagSpacer>
       {languages.map((language) => {
-        return <TagSpacer text={language}></TagSpacer>;
+        return (
+          <TagSpacer
+            key={`${role}${level}${language}`}
+            updateTags={updateTags}
+            text={language}
+          ></TagSpacer>
+        );
       })}
       {tools.map((tool) => {
-        return <TagSpacer text={tool}></TagSpacer>;
+        return (
+          <TagSpacer
+            key={`${role}${level}${tool}`}
+            updateTags={updateTags}
+            text={tool}
+          ></TagSpacer>
+        );
       })}
     </div>
   );
@@ -15,28 +35,49 @@ const JobListingTags = ({ role, level, languages = [], tools = [] }) => {
 
 export default JobListingTags;
 
-const TagSpacer = ({ text }) => {
+const TagSpacer = ({ text, updateTags }) => {
   return (
     <div className="px-1">
       <div className="text-center p-1">
-        <Tag text={text} />
+        <Tag text={text} updateTags={updateTags} />
       </div>
     </div>
   );
 };
 
-const Tag = ({ text }) => {
+const Tag = ({ text, updateTags }) => {
+  const [isSelected, toggle] = useState(false);
+
+  const selectTag = (e) => {
+    toggle(!isSelected);
+    updateTags(e.currentTarget.innerHTML);
+  };
+
+  const selectionBackgroundColor = isSelected ? "isSelected" : "isNotSelected";
+  const sectionClass = `rounded-sm ${selectionBackgroundColor}`;
+
   return (
-    <section className="rounded-sm">
-      <p className="px-2 py-1 inline-block align-middle">{text}</p>
+    <section className={sectionClass}>
+      <p className="px-2 py-1 inline-block align-middle" onClick={selectTag}>
+        {text}
+      </p>
       <style jsx>{`
-        section {
+        .isSelected {
+          background-color: var(--Desaturated-Dark-Cyan);
+        }
+        .isNotSelected {
           background-color: var(--Light-Grayish-Cyan-Background);
         }
-        p {
+        .isSelected p {
+          color: white;
+        }
+        .isNotSelected p {
           color: var(--Desaturated-Dark-Cyan);
+        }
+        p {
           font-size: 12px;
           font-weight: bold;
+          cursor: pointer;
         }
       `}</style>
     </section>
