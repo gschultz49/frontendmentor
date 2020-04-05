@@ -1,18 +1,28 @@
 const JobListingInformation = (props) => {
-  const isNew = props.isNew;
-  const isFeatured = props.isFeatured;
   return (
     <div className="flex flex-wrap">
       <div className="w-full bg-gray-500">
         <div className="flex">
-          <h1>{props.company}</h1>
-          {/* {isNew && } */}
-          <Pill text="NEW!"></Pill>
-          <Pill text="FEATURED"></Pill>
+          <h1 className="company mr-2">{props.company}</h1>
+          {props.new && <PillSpacer text="NEW!"></PillSpacer>}
+          {props.featured && <PillSpacer text="FEATURED"></PillSpacer>}
         </div>
       </div>
       <div className="w-full bg-gray-400">2</div>
       <div className="w-full bg-gray-500">3</div>
+      <style jsx>{`
+        .company {
+          color: var(--Desaturated-Dark-Cyan);
+        }
+      `}</style>
+    </div>
+  );
+};
+
+const PillSpacer = (props) => {
+  return (
+    <div className="px-1">
+      <Pill {...props} />
     </div>
   );
 };
