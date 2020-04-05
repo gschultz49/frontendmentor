@@ -16,6 +16,10 @@ const JobListingContainer = ({ joblistings }) => {
       setCollectedTags([value, ...selectedTags]);
     }
   };
+  const removeTag = (text) => {
+    const withRemovedTag = selectedTags.filter((tag) => tag != text);
+    setCollectedTags(withRemovedTag);
+  };
 
   return (
     <>
@@ -23,7 +27,7 @@ const JobListingContainer = ({ joblistings }) => {
         id="joblistings-container"
         className="flex flex-wrap mx-48 mt-20 mb-20"
       >
-        <JobFilter selectedTags={selectedTags} />
+        <JobFilter selectedTags={selectedTags} removeTag={removeTag} />
         {joblistings.map((job, idx) => {
           return <JobListing key={idx} job={job} updateTags={updateTags} />;
         })}
