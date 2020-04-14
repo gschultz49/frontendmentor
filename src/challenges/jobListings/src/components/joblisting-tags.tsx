@@ -2,6 +2,7 @@ import Tag from "./tag";
 import { useState } from "react";
 
 const JobListingTags = ({
+  id,
   role,
   level,
   updateTags,
@@ -15,7 +16,7 @@ const JobListingTags = ({
       {languages.map((language) => {
         return (
           <TagSpacer
-            key={`${role}${level}${language}`}
+            key={id}
             updateTags={updateTags}
             text={language}
           ></TagSpacer>
@@ -23,11 +24,7 @@ const JobListingTags = ({
       })}
       {tools.map((tool) => {
         return (
-          <TagSpacer
-            key={`${role}${level}${tool}`}
-            updateTags={updateTags}
-            text={tool}
-          ></TagSpacer>
+          <TagSpacer key={id} updateTags={updateTags} text={tool}></TagSpacer>
         );
       })}
     </div>

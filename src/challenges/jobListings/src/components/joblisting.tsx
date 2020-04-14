@@ -1,6 +1,6 @@
 import { getImage } from "../../../../services/joblistings/joblistings-api-utils";
-import LogoImage from "./joblisting-logo";
-import JobListingInformation from "./joblisting-information";
+import LogoImage from "./company-logo";
+import JobListingInformation from "./posting-information";
 import JobListingTags from "./joblisting-tags";
 const JobListing = ({ job, updateTags }) => {
   const imgSrc = getImage(job.logo);
@@ -16,6 +16,7 @@ const JobListing = ({ job, updateTags }) => {
       </div>
       <div className="w-7/12 h-full">
         <JobListingTags
+          id={job.id}
           role={job.role}
           level={job.level}
           languages={job.languages}

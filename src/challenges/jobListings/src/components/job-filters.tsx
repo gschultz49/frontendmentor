@@ -37,7 +37,7 @@ const JobFilterTag = ({ text, backgroundColor, removeTag }) => {
     removeTag(text);
   };
   return (
-    <div className="rounded-xl">
+    <div className="">
       <div className="inline-block">
         <Tag text={text} backgroundColor={backgroundColor} />
       </div>

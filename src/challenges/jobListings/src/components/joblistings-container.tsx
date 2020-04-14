@@ -65,7 +65,9 @@ const JobListingContainer = ({ joblistings }) => {
 
         {joblistings.map((job, idx) => {
           if (shouldShowJobListing(job)) {
-            return <JobListing key={idx} job={job} updateTags={updateTags} />;
+            return (
+              <JobListing key={`${job.id}`} job={job} updateTags={updateTags} />
+            );
           } else {
             return null;
           }

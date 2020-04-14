@@ -1,5 +1,5 @@
-import JobDetails from "./joblisting-details";
-import Pill from "./joblisting-pill";
+import JobDetails from "./job-details";
+import Pill from "./focus-pill";
 
 const JobListingInformation = (props) => {
   return (
