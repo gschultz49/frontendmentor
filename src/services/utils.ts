@@ -3,8 +3,6 @@ import { isValidImage } from "./imageUtils";
 
 export const API_BASE = "/api";
 
-export const NOW_URL = process.env.NOW_URL;
-
 export const setImagesDirectoryForProject = (imagesDir: string) => {
   return function getImageGivenDir(fileName: string) {
     const isValid = isValidImage(fileName);
@@ -16,7 +14,7 @@ export const setImagesDirectoryForProject = (imagesDir: string) => {
 
 export const setApiBaseForProject = (apiDir: string) => {
   return function getApiEndpointGivenDir(endpoint: string) {
-    return `${NOW_URL}${apiDir}${endpoint}`;
+    return `${process.env.NOW_URL}${apiDir}${endpoint}`;
   };
 };
 
