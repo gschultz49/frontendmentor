@@ -1,7 +1,0 @@
-{
-  "build": {
-    "env": {
-      "NOW_URL": "@frontendmentor_api_url"
-    }
-  }
-}
