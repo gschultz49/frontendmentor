@@ -1,13 +1,14 @@
 import BodyContainer from "./body-container";
 import WhyChooseGrid from "./whyChooseGrid";
+import { Fragment } from "react";
 
 const WhyChoose = ({ whyChoose }) => {
   return (
     <section id="whyChoose" className="py-16">
-      <>
+      <Fragment>
         <WhyChooseTop />
         <WhyChooseGrid whyChoose={whyChoose} />
-      </>
+      </Fragment>
     </section>
   );
 };

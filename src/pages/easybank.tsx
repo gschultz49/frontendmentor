@@ -5,11 +5,11 @@ import Articles from "../challenges/easybank/src/components/articles";
 import Footer from "../challenges/easybank/src/components/footer";
 import GetArticlesGridData from "../services/easybank/getArticles";
 import GetWhyChooseData from "../services/easybank/getWhyChoose";
+import { Fragment } from "react";
 
 const App = (props) => {
   return (
-    // this syntax is React fragments, enables a function to return multiple JSX elements
-    <>
+    <Fragment>
       <Navigation id={"navigation-container"} />
       <Splash />
       <WhyChose id={"whyChoose-container"} whyChoose={props.whyChoose} />
@@ -53,7 +53,7 @@ const App = (props) => {
           }
         `}
       </style>
-    </>
+    </Fragment>
   );
 };
 
