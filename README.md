@@ -2,4 +2,4 @@ Completing front-end challenges found on [Frontendmentor.io](https://www.fronten
 
 This project utilizes Typescript, React, and Next.js
 
-Projects are viewable from https://frontendmentor-one.now.sh
+Projects are viewable from https://frontendmentor-one.now.sh/easybank
